@@ -1,74 +1,121 @@
-// Create Dark Mode button
+// ================================
+// DARK / LIGHT MODE
+// ================================
+
 const themeButton = document.createElement("button");
 
+themeButton.type = "button";
 themeButton.textContent = "🌙 Dark Mode";
 themeButton.classList.add("theme-btn");
+themeButton.setAttribute("aria-label", "Switch to dark mode");
 
 document.body.appendChild(themeButton);
 
-// Change theme when button is clicked
 themeButton.addEventListener("click", function () {
 
-    document.body.classList.toggle("dark-mode");
+    const darkModeEnabled = document.body.classList.toggle("dark-mode");
 
-    if (document.body.classList.contains("dark-mode")) {
+    if (darkModeEnabled) {
         themeButton.textContent = "☀️ Light Mode";
+        themeButton.setAttribute("aria-label", "Switch to light mode");
     } else {
         themeButton.textContent = "🌙 Dark Mode";
+        themeButton.setAttribute("aria-label", "Switch to dark mode");
     }
 
 });
-// Contact Form Validation
+
+
+// ================================
+// CONTACT FORM VALIDATION
+// ================================
+
 const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
-contactForm.addEventListener("submit", function(event) {
+if (contactForm) {
 
-    event.preventDefault();
+    contactForm.addEventListener("submit", function (event) {
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+        event.preventDefault();
 
-    if (name === "" || email === "" || message === "") {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-        formMessage.textContent = "Please fill in all fields.";
-        formMessage.style.color = "red";
+        if (name === "" || email === "" || message === "") {
 
-    } else {
+            formMessage.textContent = "Please fill in all fields.";
+            formMessage.style.color = "red";
 
-        formMessage.textContent = "Message sent successfully!";
-        formMessage.style.color = "green";
+        } else {
 
-        contactForm.reset();
-    }
+            formMessage.textContent = "Message sent successfully!";
+            formMessage.style.color = "green";
 
-});
-// Mobile Menu
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.querySelector(".nav-links");
+            contactForm.reset();
+        }
 
-menuBtn.addEventListener("click", function() {
-    navLinks.classList.toggle("active");
-});
-// Scroll To Top Button
-const topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", function() {
-
-    if (window.scrollY > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
-
-});
-
-topBtn.addEventListener("click", function() {
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
     });
 
-});
+}
+
+
+// ================================
+// MOBILE NAVIGATION MENU
+// ================================
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navigation-menu");
+
+if (menuBtn && navLinks) {
+
+    menuBtn.addEventListener("click", function () {
+
+        const menuIsOpen = navLinks.classList.toggle("active");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            menuIsOpen ? "true" : "false"
+        );
+
+        menuBtn.setAttribute(
+            "aria-label",
+            menuIsOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
+    });
+
+}
+
+
+// ================================
+// SCROLL TO TOP BUTTON
+// ================================
+
+const topBtn = document.getElementById("topBtn");
+
+if (topBtn) {
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+
+    });
+
+    topBtn.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
