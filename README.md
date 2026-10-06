@@ -1,80 +1,130 @@
-# Week 2 & Week 3 - Responsive Interactive Portfolio Website
+# Week 4 - Responsive Interactive Portfolio Website
 
 ## Project Overview
 
-This project is a responsive and interactive personal portfolio website developed using HTML5, CSS3, and JavaScript. The project was created as part of the internship Week 2 and Week 3 tasks.
+This project is a responsive and interactive personal portfolio website developed as part of my internship assignments.
 
-Week 2 focused on responsive web design, while Week 3 focused on adding JavaScript-based interactivity and dynamic functionality.
+The portfolio was progressively improved from Week 1 to Week 4.
 
-The website is designed to work properly on desktop, tablet, and mobile devices.
+The Week 4 version focuses on improving the website's performance, accessibility, responsiveness and overall professional design while maintaining the interactive features developed in previous weeks.
 
-## Website Sections
+---
 
-- Home
-- About Me
-- My Skills
-- My Projects
-- Contact Me
-- Footer
-
-## Week 2 - Responsive Design
-
-The responsive design was created using:
+## Technologies Used
 
 - HTML5
 - CSS3
-- CSS Grid
-- Flexbox
-- Media Queries
-- Responsive Images
-- Flexible Layouts
+- JavaScript
+- GitHub
+- GitHub Pages
 
-Two main responsive breakpoints were used:
+---
 
-- `max-width: 800px` for tablet devices
-- `max-width: 500px` for mobile devices
+## Main Features
 
-The layout automatically adjusts according to the screen size.
+### Responsive Design
 
-## Week 3 - JavaScript Features
-
-JavaScript was added to make the portfolio website interactive.
-
-### 1. Dark/Light Mode
-
-A button was added to switch between dark mode and light mode.
-
-### 2. Contact Form Validation
-
-The contact form checks whether the required fields are filled before displaying a success message.
-
-### 3. Mobile Navigation Menu
-
-A menu button was added for mobile devices. Users can open and close the navigation links using the menu button.
-
-### 4. Scroll-to-Top Button
-
-A scroll-to-top button appears after scrolling down the page. Clicking the button smoothly returns the user to the top.
-
-## JavaScript Concepts Used
-
-- DOM Manipulation
-- Event Listeners
-- Click Events
-- Submit Events
-- Class Manipulation
-- Form Validation
-- Window Scroll Events
-
-## Testing
-
-The website was tested on:
+The website is designed to work properly on:
 
 - Desktop
+- Laptop
 - Tablet
-- Mobile/Android
+- Mobile devices
 
-The JavaScript features and responsive layout were tested to make sure they work correctly without breaking the existing design.
+### Interactive Features
+
+- Dark / Light Mode
+- Mobile Navigation Menu
+- Contact Form Validation
+- Scroll-to-Top Button
+- Smooth Navigation
+- Responsive Project Cards
+
+### Accessibility Improvements
+
+The Week 4 version includes:
+
+- Semantic HTML structure
+- Proper heading hierarchy
+- Descriptive image alt text
+- Accessible form labels
+- Keyboard focus indicators
+- ARIA attributes for navigation
+- Accessible buttons
+- Reduced-motion support
+
+### Performance Improvements
+
+The website was optimized by:
+
+- Using efficient CSS selectors
+- Reducing unnecessary visual effects
+- Optimizing layout and styling
+- Using responsive images
+- Lazy loading images below the main screen
+- Removing unnecessary CSS
+
+---
+
+## Projects
+
+### 1. Password Generator
+
+A simple password generator created to practice programming logic and user interaction.
+
+### 2. Chess Game
+
+A chess game project created to practice game logic, programming concepts and user interaction.
+
+### 3. Student CSE Project
+
+A computer science project developed to apply programming and problem-solving concepts.
+
+### 4. 2D Racing Car Game
+
+A browser-based racing game featuring car movement, speed control, collision detection and race positioning.
+
+The project includes a racing game image used as the project preview in the portfolio.
+
+---
+
+## Website Sections
+
+The portfolio contains the following sections:
+
+- Home
+- About Me
+- Skills
+- Projects
+- Contact
+
+---
+
+## Week 4 Testing
+
+The website was tested using Google Lighthouse.
+
+### Mobile
+
+| Category | Score |
+|---|---:|
+| Performance | 88 |
+| Accessibility | 95 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+### Desktop
+
+| Category | Score |
+|---|---:|
+| Performance | 100 |
+| Accessibility | 100 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+The website was also tested on a mobile device to verify responsive layout, navigation and interactive functionality.
+
+---
 
 ## Project Structure
 
@@ -91,4 +141,5 @@ Week2-Responsive-Portfolio/
     ├── about-image.jpg
     ├── project1-image.jpg
     ├── project2-image.jpg
-    └── project3-image.jpg
+    ├── project3-image.jpg
+    └── racing-game-image.jpg
